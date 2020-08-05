@@ -1,0 +1,90 @@
+<html>
+<head>
+    <script language="javascript" type="text/javascript" src="frontend.js"> </script>
+    <script type="text/javascript">
+
+        function stopRKey(evt) {
+          var evt = (evt) ? evt : ((event) ? event : null);
+          var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+          if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+        }
+        
+        document.onkeypress = stopRKey;
+        
+        </script>
+</head>
+
+<link rel="stylesheet" type="text/css" href="frontend.css">
+
+
+<body>
+
+<h2 style="text-align:center;font-family:Arial;font-size:180%;">Sentiment Polarity Annotations of Chinese Business News</h2>
+<p style="text-align:center;"><a href="https://drive.google.com/file/d/1QT-S2RRuJ9hF8RKv5wSTd16VM5QWxtAg/view?usp=sharing">(download corpus here)</a></p>
+
+<div id = 'search' class = 'search'>
+    <h3 style="color:DodgerBlue;">- Search by Chinese keyword: (e.g. 病毒 / 疫情 / ...)</h3>
+    <form class="search_form" action="/" id = 'search_form'>
+        <p style="color:DodgerBlue;">Select View Option:
+            <select name="view">
+                <option value="yes">Annotated Articles</option>
+                <option value="no">All Articles</option>
+            </select></p>
+        <input type= "search_text" placeholder="Input Keywords... e.g. 病毒 / 疫情 / ..." name="search_text">
+        <button type = 'button' onclick = "submit_search();">Search!</button><br><br>
+        
+      </form>
+
+</div>
+
+<div>
+    <form class="annotated_search" action='/' id = "annotated_search">
+
+    <h3 style="color:dodgerblue;">- Annotated Polarities</h3>
+    <button type= "button" id="Pos" class="btn Positive" onclick="annotation(this)">Positive</button>
+    <button type="button" id="Neu" class="btn Neutral" onclick="annotation(this)">Neutral</button>
+    <button  type="button" id="Neg" class="btn Negative" onclick="annotation(this)">Negative</button>
+
+</form>
+
+</div>
+
+
+<div class = 'show' id = "show" >
+    <h4 style="color:DodgerBlue;">- Returned Articles here: </h4>
+    <ul id = 'show_article' class = 'show_article'>
+
+    </ul>
+</div>
+
+
+<h3 style="color:DodgerBlue;">- Corpus Statistics:</h3>
+<table border="1">
+    <tbody>
+    <tr>
+    <td>&nbsp;Corpus Size</td>
+    <td>Paragraph Count&nbsp;</td>
+    <td>Tokens in Corpus&nbsp;</td>
+    <td>&nbsp;Annotated Texts</td>
+    <td>&nbsp;Annotated Paragraphs</td>
+    </tr>
+    <tr>
+    <td>602&nbsp;</td>
+    <td>17777&nbsp;</td>
+    <td>~850,000&nbsp;</td>
+    <td>15&nbsp;</td>
+    <td>&nbsp;582</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <img src= ./images/paragraph_distribution.png width=630 height=280><br>
+    <img src= ./images/text_distribution.png width=630 height=280>
+
+
+
+
+</body>
+
+
+</html>

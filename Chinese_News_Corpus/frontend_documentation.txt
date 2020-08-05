@@ -1,0 +1,27 @@
+## Technical documentation for our frontend interface.
+
+The front end includes a html, css and javascript file that interacts with each other
+The html provides the interface layout and it includes 
+A header: This displays a summary information of what the interface is about.
+
+A search bar and dropdown menu: This includes a search bar where keywords can be typed and a dropdown indicating where the search should occur.
+
+search button: This button 'on click' submits the result of the search to a function called "submit_search" in the Javascript file 
+
+Buttons for polarities: This displays the polarity annotation for our corpus and they include (Positive, Negative and Neutral). 'On click' the button submits the id of the button to a function called "annotation" in the Javascript file.
+
+Corpus statistics: These images are called and retrieved once the interface is loaded.
+
+
+The Javascript file contains three functions as mentions above.
+- The submit_search function that generates a query string for each search
+- The annotation functions that generates query string for the each annotation respectively.
+- The update_page function that allows the results of each search and click to be loaded in the same home page.
+
+Note that each of the query string generated would be sent to the backend for processing.
+
+The css file contains functions for the designs and aesthetics of our interface.
+It contains the following:
+- The background display, the color scheme and font size.
+- The search button size, its position and color.
+- All the polarity buttons, their size, shape, color and hover functionality.
