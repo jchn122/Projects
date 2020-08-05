@@ -24,3 +24,5 @@ There are summary statistics on the interface that shows some information about 
 
 Finally, when you navigate to any given annotated article, each paragraph has been coloured to represent the polarities and a graph that shows how the polarities change within an article. 
 
+Example of interface:
+![Interface Example](https://github.com/jchn122/Projects/blob/master/Chinese_News_Corpus/interface_example.png)
